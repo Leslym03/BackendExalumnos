@@ -1,0 +1,13 @@
+###
+GET http://localhost:8000/publication/display HTTP/1.1
+
+###
+POST http://localhost:8000/publication/insert HTTP/1.1
+Content-Type: application/json
+
+{
+"idpublication": 1,
+"description": "First publication",
+"photo_publication": "photo.png",
+"CUI": 20181744
+}

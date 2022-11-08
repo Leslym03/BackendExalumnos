@@ -32,7 +32,11 @@ app.use('/users', require('./routes/users.routes'))
 //CRUD profile
 app.use('/profile', require('./routes/profile.routes'))
 
+//CRUD publication
+app.use('/publication', require('./routes/publication.routes'))
 
+//CRUD job
+app.use('/job', require('./routes/job.routes'))
 
 
 module.exports = app

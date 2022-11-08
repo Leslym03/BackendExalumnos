@@ -25,7 +25,7 @@ route.post('/insert', (req, res) => {
         conn.query('INSERT INTO profile set ?', [req.body], (err, rows) =>{
             if(err) return res.send(err)
 
-            res.send('Insert user success!')
+            res.send('Insert profile success!')
         })
     })
 })
@@ -38,7 +38,7 @@ route.delete('/delete/(:id)', (req, res) => {
         conn.query('DELETE FROM profile WHERE CUI = ?', [req.params.id], (err, rows) =>{
             if(err) return res.send(err)
 
-            res.send('Delete user success!')
+            res.send('Delete profile success!')
         })
     })
 })
@@ -51,7 +51,7 @@ route.put('/update/(:id)', (req, res) => {
         conn.query('UPDATE profile set ? WHERE CUI = ?', [req.body, req.params.id], (err, rows) =>{
             if(err) return res.send(err)
 
-            res.send('Update user success!')
+            res.send('Update profile success!')
         })
     })
 })
