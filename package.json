@@ -1,0 +1,23 @@
+{
+  "name": "BackendExalumnos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leslym03/BackendExalumnos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leslym03/BackendExalumnos/issues"
+  },
+  "homepage": "https://github.com/Leslym03/BackendExalumnos#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
