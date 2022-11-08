@@ -4,11 +4,6 @@ route.get('/test', (req, res) => {
     res.json({message : 'testing'})
 })
 
-route.get('/hola', (req, res) => {
-    res.json({message : 'hola'})
-})
-
-
 route.get('/users', (req, res) => {
     req.getConnection((err, conn) =>{
         if(err) return res.send(err)
