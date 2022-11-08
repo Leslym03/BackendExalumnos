@@ -1,2 +1,33 @@
 ###
 GET http://localhost:8000/profile/display HTTP/1.1
+
+###
+POST http://localhost:8000/profile/insert HTTP/1.1
+Content-Type: application/json
+
+{
+"CUI": 20121342,
+"photo_profile": "photogonzalo.jpg",
+"info": "Hi ",
+"experience": "Web developer",
+"skills": "copertative",
+"specialty": "Frontend",
+"location": "Arequipa, Peru"
+}
+
+###
+DELETE http://localhost:8000/profile/delete/20121342 HTTP/1.1
+
+###
+PUT http://localhost:8000/profile/update/20121342
+Content-Type: application/json
+
+{
+"CUI": 20121342,
+"photo_profile": "photogonzalo.jpg",
+"info": "Hi ",
+"experience": "Web developer",
+"skills": "copertative",
+"specialty": "Frontend",
+"location": "Puno, Peru"
+}

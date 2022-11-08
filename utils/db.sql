@@ -15,8 +15,8 @@ CREATE TABLE IF NOT EXISTS `profile` (
   `info` VARCHAR(300) NULL,
   `experience` LONGTEXT NULL,
   `skills` MEDIUMTEXT NULL,
-  `especialidad` VARCHAR(100) NULL,
-  `localidad` VARCHAR(50) NULL,
+  `specialty` VARCHAR(100) NULL,
+  `location` VARCHAR(50) NULL,
   PRIMARY KEY (`CUI`),
   CONSTRAINT `fk_Profile_1`
     FOREIGN KEY (`CUI`)
