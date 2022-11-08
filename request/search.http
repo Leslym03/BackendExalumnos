@@ -1,0 +1,8 @@
+###
+GET http://localhost:8000/search/statistics/titulado HTTP/1.1
+
+###
+GET http://localhost:8000/search/statistics/egresado HTTP/1.1
+
+###
+GET http://localhost:8000/search/statistics/bachiller HTTP/1.1

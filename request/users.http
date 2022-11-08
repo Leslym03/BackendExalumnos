@@ -27,3 +27,27 @@ Content-Type: application/json
 "graduation_year": 2017,
 "type_user": "titulado"
 }
+
+###
+POST http://localhost:8000/users/insert HTTP/1.1
+Content-Type: application/json
+
+{
+"CUI": 20151542,
+"mail": "schullunquiala@unsa.edu.pe",
+"password": "sharon",
+"graduation_year": 2020,
+"type_user": "titulado"
+}
+
+###
+PUT http://localhost:8000/users/update/20151542
+Content-Type: application/json
+
+{
+"CUI": 20151542,
+"mail": "schullunquiala@unsa.edu.pe",
+"password": "sharon",
+"graduation_year": 2021,
+"type_user": "titulado"
+}

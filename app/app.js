@@ -38,5 +38,7 @@ app.use('/publication', require('./routes/publication.routes'))
 //CRUD job
 app.use('/job', require('./routes/job.routes'))
 
+//search
+app.use('/search', require('./routes/search.routes'))
 
 module.exports = app
