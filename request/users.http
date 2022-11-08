@@ -1,0 +1,29 @@
+###
+GET http://localhost:8000/users/display HTTP/1.1
+
+###
+POST http://localhost:8000/users/insert HTTP/1.1
+Content-Type: application/json
+
+{
+"CUI": 20121342,
+"mail": "gcoayla@unsa.edu.pe",
+"password": "coayla",
+"graduation_year": 2017,
+"type_user": "egresado"
+}
+
+###
+DELETE http://localhost:8000/users/delete/20121342 HTTP/1.1
+
+###
+PUT http://localhost:8000/users/update/20121342
+Content-Type: application/json
+
+{
+"CUI": 20121342,
+"mail": "gcoayla@unsa.edu.pe",
+"password": "coayla",
+"graduation_year": 2017,
+"type_user": "titulado"
+}

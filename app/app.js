@@ -26,9 +26,11 @@ app.use(json())
 
 app.use(myconn(mysql, dbOptions, 'single'))
 
-app.use('/api', require('./routes/test.routes'))
+//CRUD users
+app.use('/users', require('./routes/users.routes'))
 
-
+//CRUD profile
+app.use('/profile', require('./routes/profile.routes'))
 
 
 
