@@ -1,4 +1,5 @@
 const express = require('express')
+
 const port = process.env.PORT || 8000
 const { urlencoded, json } = require('express')
 const path = require('path')
@@ -40,5 +41,6 @@ app.use('/job', require('./routes/job.routes'))
 
 //search
 app.use('/search', require('./routes/search.routes'))
+
 
 module.exports = app

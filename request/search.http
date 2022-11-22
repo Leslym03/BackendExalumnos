@@ -9,7 +9,7 @@ GET http://localhost:8000/search/statistics/bachiller HTTP/1.1
 
 
 ###
-GET http://localhost:8000/search/qgraduationyear/2021 HTTP/1.1
+GET http://localhost:8000/search/qgraduationyear/2017 HTTP/1.1
 ###
 GET http://localhost:8000/search/qtypeuser/titulado HTTP/1.1
 ###

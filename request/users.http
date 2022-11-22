@@ -6,26 +6,32 @@ POST http://localhost:8000/users/insert HTTP/1.1
 Content-Type: application/json
 
 {
-"CUI": 20121342,
-"mail": "gcoayla@unsa.edu.pe",
-"password": "coayla",
-"graduation_year": 2017,
-"type_user": "egresado"
+"CUI": 20181744,
+"mail": "lmita@unsa.edu.pe",
+"password": "root",
+"graduation_year": 0,
+"type_user": "admin",
+"name": "Lesly Mita",
+"date": "2000-03-03",
+"academic_degree": "admin"
 }
 
 ###
 DELETE http://localhost:8000/users/delete/20121342 HTTP/1.1
 
 ###
-PUT http://localhost:8000/users/update/20121342
+PUT http://localhost:8000/users/update/20181744
 Content-Type: application/json
 
 {
-"CUI": 20121342,
-"mail": "gcoayla@unsa.edu.pe",
-"password": "coayla",
-"graduation_year": 2017,
-"type_user": "titulado"
+"CUI": 20181744,
+"mail": "lmita@unsa.edu.pe",
+"password": "root",
+"graduation_year": 0,
+"type_user": "admin",
+"name": "Lesly Mita",
+"date": "2000-03-03",
+"academic_degree": "admin"
 }
 
 ###

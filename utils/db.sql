@@ -2,10 +2,13 @@ CREATE DATABASE exalumnos;
 
 CREATE TABLE IF NOT EXISTS `users` (
   `CUI` INT NOT NULL,
+  `name` VARCHAR(70) NOT NULL,
+  `date` DATE,
+  `academic_degree` VARCHAR(45) NOT NULL,
   `mail` VARCHAR(50) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `graduation_year` INT NOT NULL,
-  `type_user` VARCHAR(45) NOT NULL,
+  `type_user` VARCHAR(45) NOT NULL, admin o user
   PRIMARY KEY (`CUI`))
 ENGINE = InnoDB;
 
@@ -31,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `publication` (
   `description` LONGTEXT NULL,
   `photo_publication` LONGTEXT NULL,
   `CUI` INT NOT NULL,
+  `likes` INT,
   PRIMARY KEY (`idpublication`, `CUI`),
   INDEX `fk_publication_1_idx` (`CUI` ASC),
   CONSTRAINT `fk_publication_1`
