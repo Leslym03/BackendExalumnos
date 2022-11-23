@@ -9,5 +9,24 @@ Content-Type: application/json
 "idpublication": 1,
 "description": "First publication",
 "photo_publication": "photo.png",
-"CUI": 20181744
+"CUI": 20181744,
+"likes": 0
 }
+
+###
+DELETE http://localhost:8000/publication/delete/1 HTTP/1.1
+
+###
+PUT http://localhost:8000/publication/update/1
+Content-Type: application/json
+
+{
+"idpublication": 1,
+"description": "First publication",
+"photo_publication": "photo.png",
+"CUI": 20181744,
+"likes": 0
+}
+
+###
+DELETE http://localhost:8000/publication/likes/1 HTTP/1.1

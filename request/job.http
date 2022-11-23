@@ -16,4 +16,19 @@ Content-Type: application/json
 "state": "noactive"
 }
 
+###
+DELETE http://localhost:8000/job/delete/1 HTTP/1.1
 
+###
+PUT http://localhost:8000/job/update/1
+Content-Type: application/json
+{
+"idjob_offer": 1,
+"CUI": 20181744,
+"title": "Analista de datos UNSA",
+"description_job": "Web developer holidays",
+"location": "virtual",
+"contract_type": "part time",
+"requirements": "nodejs, angular, react",
+"state": "noactive"
+}

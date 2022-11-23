@@ -30,7 +30,43 @@ route.post('/insert', (req, res) => {
     })
 })
 
+//Update publication
+route.put('/update/(:id)', (req, res) => {
+    req.getConnection((err, conn) =>{
+        if(err) return res.send(err)
 
+        conn.query('UPDATE publication set ? WHERE idpublication = ?', [req.body, req.params.id], (err, rows) =>{
+            if(err) return res.send(err)
 
+            res.send('Update publication success!')
+        })
+    })
+})
+
+//Delete publication
+route.delete('/delete/(:id)', (req, res) => {
+    req.getConnection((err, conn) =>{
+        if(err) return res.send(err)
+
+        conn.query('DELETE FROM publication WHERE idpublication = ?', [req.params.id], (err, rows) =>{
+            if(err) return res.send(err)
+
+            res.send('Delete publication success!')
+        })
+    })
+})
+
+//likes
+route.put('/likes/(:id)', (req, res) => {
+    req.getConnection((err, conn) =>{
+        if(err) return res.send(err)
+
+        conn.query('UPDATE publication set likes= likes+1 WHERE idpublication= ?', [req.params.id], (err, rows) =>{
+            if(err) return res.send(err)
+
+            res.send('Likes publication success!')
+        })
+    })
+})
 
 module.exports = route

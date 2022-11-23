@@ -46,5 +46,7 @@ app.use('/job', require('./routes/job.routes'))
 //search
 app.use('/search', require('./routes/search.routes'))
 
+//login
+app.use('/login', require('./routes/login.routes'))
 
 module.exports = app
