@@ -27,6 +27,10 @@ app.use(json())
 
 app.use(myconn(mysql, dbOptions, 'single'))
 
+app.get('/', (req, res) => {
+    res.json({message : 'Backend ready'})
+})
+
 //CRUD users
 app.use('/users', require('./routes/users.routes'))
 
