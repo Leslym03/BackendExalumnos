@@ -57,11 +57,24 @@ route.delete('/delete/(:id)', (req, res) => {
 })
 
 //likes
-route.put('/likes/(:id)', (req, res) => {
+route.put('/likesadd/(:id)', (req, res) => {
     req.getConnection((err, conn) =>{
         if(err) return res.send(err)
 
         conn.query('UPDATE publication set likes= likes+1 WHERE idpublication= ?', [req.params.id], (err, rows) =>{
+            if(err) return res.send(err)
+
+            res.send('Likes publication success!')
+        })
+    })
+})
+
+//likes
+route.put('/likesdel/(:id)', (req, res) => {
+    req.getConnection((err, conn) =>{
+        if(err) return res.send(err)
+
+        conn.query('UPDATE publication set likes= likes-1 WHERE idpublication= ?', [req.params.id], (err, rows) =>{
             if(err) return res.send(err)
 
             res.send('Likes publication success!')
